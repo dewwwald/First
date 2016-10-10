@@ -1,0 +1,14 @@
+%html {
+   font-size: $fs-base / 16 * 100%;
+}
+
+%body {
+}
+
+html { // 100% is the browser fs, 16 is standard, $fs-base is the design
+   @extend %html;
+}
+
+body {
+   @extend %body;
+}
