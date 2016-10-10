@@ -1,0 +1,15 @@
+/**
+ * Config
+ */
+@import "custom/config";
+@import "core/config-default";
+
+/**
+ * Do not edit the core files without making a pr
+ */
+@import "core/load";
+
+/**
+ * Go ahead and edit custom load
+ */
+@import "custom/load";
