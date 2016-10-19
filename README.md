@@ -1,5 +1,4 @@
-#Outlines
-
+#First
 
 ##A few points
 - Because when you want to go fast you must go alone. I am still learning and this will be a way to refine my workflow (If you want to learn you must go alone)
