@@ -7,9 +7,9 @@
 /**
  * Do not edit the core files without making a pr
  */
-@import "core/load";
+@import "core/!load";
 
 /**
  * Go ahead and edit custom load
  */
-@import "custom/load";
+@import "custom/!load";
