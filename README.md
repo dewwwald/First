@@ -11,3 +11,20 @@
 - Read the framework.
 - This framework is as a result of github.com/larrybotha/styleguide, whom use to be my mentor in css
 - Inuit.css is a good to idea of what this framework should do.
+
+##Elements 
+Elements: an essential or characteristic part of something abstract.
+ - For example a grid-width arranged with a grid wraps is an dependant on one another.
+
+##TERMS
+
+Programmers use the natural language (mostly English) to describe what the computer should do. Therefore the following terms are used to describe consepts found on a website.
+
+###Elements 
+Elements: an essential or characteristic part of something abstract.
+- For example a grid-width arranged with a grid wrap is dependant on one another.
+
+###Structure
+Structure: is an arrangement and organization of interrelated elements in a material object or system.
+- For example a grid is an arrangement of grid widths and grid wraps
+
