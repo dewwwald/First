@@ -1,1 +1,44 @@
+/*--------------------*\
+ * FEATURES
+\*--------------------*/
+$grid: true !default;
+$responsive: true !default;
+
+/*--------------------*\
+ * Font Setup
+\*--------------------*/
 $fs-base: 16px !default;
+
+/*--------------------*\
+ * GRID
+\*--------------------*/
+$grid-gut: 1.5 !default;
+
+/*--------------------*\
+ * COLOR VARS
+\*--------------------*/
+$clr-base: #404040 !default;
+$clr-base-lt: #979797 !default;
+$clr-base-ltr: #a8a8a8 !default;
+$clr-base-ltst: #EAEAEA !default;
+$clr-base-dk: darken($clr-base, 5%) !default;
+
+$clr-primary: #EE4596 !default;
+$clr-primary-lt: lighten($clr-primary, 5%) !default;
+$clr-primary-ltr: lighten($clr-primary, 10%) !default;
+$clr-primary-ltst: lighten($clr-primary, 15%) !default;
+$clr-primary-dk: darken($clr-primary, 5%) !default;
+
+$clr-secondary: #56CFAD !default;
+$clr-secondary-lt: lighten($clr-secondary, 5%) !default;
+$clr-secondary-ltr: lighten($clr-secondary, 10%) !default;
+$clr-secondary-ltst: lighten($clr-secondary, 15%) !default;
+$clr-secondary-dk: darken($clr-secondary, 5%) !default;
+
+$clr-tertiary: #f7931e !default;
+$clr-tertiary-lt: lighten($clr-tertiary, 5%) !default;
+$clr-tertiary-ltr: lighten($clr-tertiary, 10%) !default;
+$clr-tertiary-ltst: lighten($clr-tertiary, 15%) !default;
+$clr-tertiary-dk: darken($clr-tertiary, 5%) !default;
+
+$clr-quintinary: #424f64 !default;
