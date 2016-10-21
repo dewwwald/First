@@ -1,0 +1,16 @@
+/**
+ * Percentage Widths
+ * Mainly used as part of the grid
+ */
+
+@mixin width-generator ($size: '')
+{
+   .#{$size}w--1\/2 { width: 50%;}
+}
+
+
+@include width-generator();
+
+// @if $responsive
+// {
+// }
