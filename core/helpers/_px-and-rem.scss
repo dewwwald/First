@@ -1,0 +1,17 @@
+@mixin px-and-rem ($property, $value)
+{
+   @if is-px($value)
+   {
+      $property: $value;
+      $property: px-to-rem($value);
+   }
+   @else if (unit($value) == '')
+   {
+      #{$property}: $value * $fs-base;
+      #{$property}: $value * 1rem;
+   }
+   @else
+   {
+      @warn "Make use px or unit less values for value provided: `$value`@px-and-rem";
+   }
+}

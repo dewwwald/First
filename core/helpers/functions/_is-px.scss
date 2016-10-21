@@ -1,0 +1,9 @@
+/**
+ * Checks if value is px | 0
+ * @param value
+ * @return bool
+ */
+@function is-px ($value)
+{
+   @return unit($value) == 'px' or $value == 0
+}

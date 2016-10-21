@@ -1,0 +1,16 @@
+/**
+ * @param value with unit px
+ * @return value remified
+ */
+@function px-to-rem ($value)
+{
+   @if is-px($value)
+   {
+      @warn "Make sure that `$value` is a px unit.";
+   }
+   @else
+   {
+      $value: $value / $fs-base;
+      @return $value * 1rem;
+   }
+}
