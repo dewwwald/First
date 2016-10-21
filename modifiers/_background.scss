@@ -1,0 +1,7 @@
+%bgc--base { background-color: $clr-base}
+%bgc--base-lt { background-color: $clr-base-lt}
+%bgc--base-ltr { background-color: $clr-base-ltr}
+%bgc--base-ltst { background-color: $clr-base-ltst}
+%bgc--base-dk { background-color: $clr-base-dk}
+
+.bgc--base-ltr { @extend %bgc--base-ltr}
