@@ -1,0 +1,10 @@
+/**
+ * add border-box sizing of not global
+ */
+@mixin border-box ()
+{
+   @if (not $global-border-box)
+   {
+      box-sizing: border-box;
+   }
+}

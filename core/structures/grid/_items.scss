@@ -4,5 +4,6 @@
 %grid__item {
    display: inline-block;
    width: 100%;
-   // font-size: 1rem;
+   @include px-and-rem(padding-left, 1.5);
+   @include border-box();
 }
