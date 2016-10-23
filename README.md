@@ -12,15 +12,22 @@
 - This framework is as a result of github.com/larrybotha/styleguide, whom use to be my mentor in css
 - Inuit.css is a good to idea of what this framework should do.
 
+##INSTALLATION
+
+Run the following command in the folder you want the framework to be made.
+
+```bash
+curl -L https://github.com/dewwwald/First/archive/master.tar.gz | tar zx --strip 1
+```
+
 ##TERMS
 
 Programmers use the natural language (mostly English) to describe what the computer should do. Therefore the following terms are used to describe consepts found on a website.
 
-###Elements 
+###Elements
 Elements: an essential or characteristic part of something abstract.
 - For example a grid-width arranged with a grid wrap is dependant on one another.
 
 ###Structure
 Structure: is an arrangement and organization of interrelated elements in a material object or system.
 - For example a grid is an arrangement of grid widths and grid wraps
-
