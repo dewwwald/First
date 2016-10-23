@@ -1,16 +1,30 @@
 /**
- * Percentage Widths
- * Mainly used as part of the grid
- */
+* Percentage Widths
+* Mainly used as part of the grid
+*/
+@mixin make-widths ($size, $denominator) {
+   /**
+    * #{$denominator} fractions widths
+    */
+   @if ($size != '') {
+      $size: $size + '-';
+   }
+   @for $i from 1 through $denominator {
+      %#{$size}w--#{$i}\/#{$denominator} { width: $i/$denominator*100%;}
+      .#{$size}w--#{$i}\/#{$denominator} { @extend %#{$size}w--#{$i}\/#{$denominator};}
+   }
+}
 
-@mixin width-generator ($size: '')
+@mixin width-generator ()
 {
-   .#{$size}w--1\/2 { width: 50%;}
+   /* There are applications for this kind of behaviour */
+   %#{$size}w--auto { width: auto;}
+   .#{$size}w--auto { @extend %#{$size}w--auto;}
+
+   @include make-widths('', 12);
+   @include make-widths('', 7);
+   @include make-widths('', 3);
 }
 
 
 @include width-generator();
-
-// @if $responsive
-// {
-// }
