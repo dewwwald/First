@@ -18,8 +18,8 @@
 @mixin width-generator ()
 {
    /* There are applications for this kind of behaviour */
-   %#{$size}w--auto { width: auto;}
-   .#{$size}w--auto { @extend %#{$size}w--auto;}
+   %w--auto { width: auto;}
+   .w--auto { @extend %w--auto;}
 
    @include make-widths('', 12);
    @include make-widths('', 7);
