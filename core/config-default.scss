@@ -4,6 +4,16 @@
 $grid: true !default;
 $responsive: true !default;
 $global-border-box: true !default;
+$desktop-first: false !default;
+
+$media-direction: 'max' !default;
+@if (not $desktop-first) {
+   $media-direction: 'min';
+}
+
+$desk-start: 1080px !default;
+$lap-start: 789px !default;
+$palm-start: 480px !default;
 
 /*--------------------*\
  * Font Setup
