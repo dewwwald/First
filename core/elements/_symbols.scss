@@ -1,0 +1,29 @@
+/*------------------------------------------------*\
+This is for symbols
+Use svg symbols for icons, there are no files loaded,
+but an icon system are loaded is embedded in html.
+Because of this I am not sure how and if the browser
+can cache icon systems.
+
+However the bandwidth tradeoff for flexibility is good
+
+Icon system in html:
+svg.display--none
+ symbol#[your-id][viewbox="svg viewbox"]
+  g
+   [your svg] <-- fill: inherit; stroke: inherit;
+
+svg
+ use xlink:href="#[your-id]"
+\*------------------------------------------------*/
+.symbol {
+   display: inline-block;
+   vertical-align: inherit;
+   line-height: inherit;
+   font-size: inherit;
+   max-width: 100%;
+
+   & > svg {
+      width: 100%;
+   }
+}
