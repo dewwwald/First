@@ -1,0 +1,10 @@
+/* Add all font faces as per the config */
+@each $config in $font-setup {
+  @include font-face (
+    map-get($config, name),
+    map-get($config, path),
+    map-get($config, filename),
+    map-get($config, weight),
+    map-get($config, style)
+  )
+}

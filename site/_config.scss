@@ -9,6 +9,40 @@ $desktop-first: false;
 /*--------------------*\
  * Font Setup
 \*--------------------*/
+/* $font names */
+$font-path: '../fonts/'
+$font-base: 'Robotto';
+$font-header: 'Rokkit';
+
+/* $font stacks used in css */
+$font-base-stack: $font-base, slab-serif;
+$font-header-stack: $font-header, slab-serif;
+
+/* $font config used by core */
+/*------------------------------------------------*\
+#TIP - How to get more font configs
+- duplicate the sass map
+- then simply change the values
+\*------------------------------------------------*/
+$font-setup: (
+   (
+      name: $font-base,
+      path: $font-path,
+      filename: 'robotto-regular-webfont',
+      weight: normal,
+      style: normal
+   ),
+   (
+      name: $font-header,
+      path: $font-path,
+      filename: 'rokkit-regular-webfont',
+      weight: normal,
+      style: normal
+   )
+);
+
+
+
 $fs-base: 16px;
 
 /*--------------------*\

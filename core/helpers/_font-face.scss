@@ -1,0 +1,16 @@
+/**
+ * Just a mixin to try and simplify adding font faces
+ */
+@mixin font-face ($font-name, $path, $filename, $style, $weight)
+{
+  @font-face {
+    font-family: $font-name;
+    src: url('#{$path}#{$filename}.eot');
+    src: url('#{$path}#{$filename}.eot?#iefix') format('embedded-opentype'),
+        url('#{$path}#{$filename}.woff2') format('woff2'),
+        url('#{$path}#{$filename}.woff') format('woff'),
+        url('#{$path}#{$filename}.svg#rokkittbold') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
