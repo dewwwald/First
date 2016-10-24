@@ -10,7 +10,7 @@ $desktop-first: false;
  * Font Setup
 \*--------------------*/
 /* $font names */
-$font-path: '../fonts/'
+$font-path: '../fonts/';
 $font-base: 'Robotto';
 $font-header: 'Rokkit';
 
@@ -40,8 +40,6 @@ $font-setup: (
       style: normal
    )
 );
-
-
 
 $fs-base: 16px;
 
