@@ -1,0 +1,19 @@
+$margin: (
+   '_base': ('margin': $base-spacing),
+   'sides': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
+   'top': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
+   'bottom': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
+   'ends': ('margin-top': $base-spacing, 'margin-bottom': $base-spacing),
+   'small': ('margin': $base-spacing - .5),
+   'small--sides': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
+   'small--top': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
+   'small--bottom': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
+   'small--ends': ('margin-top': $base-spacing - .5, 'margin-bottom': $base-spacing - .5),
+   'large': ('margin': $base-spacing + .5),
+   'large--sides': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
+   'large--top': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
+   'large--bottom': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
+   'large--ends': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5)
+);
+
+@include placeholder-generator('push', $margin, true);

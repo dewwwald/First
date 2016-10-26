@@ -12,3 +12,19 @@
    font-size: 0px;
    & > %grid__item { font-size: 1rem}
 }
+
+%grid--middle {
+   @extend %grid;
+   vertical-align: middle;
+}
+
+%grid--bottom {
+   @extend %grid;
+   vertical-align: middle;
+}
+
+%grid--reverse {
+   @extend %grid;
+   direction: rtl;
+}
+

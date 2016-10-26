@@ -1,3 +1,4 @@
+@if $use-grid {
 /**
  * See the structures/_!load.scss to understand this abstraction.
  */
@@ -23,9 +24,7 @@ HTML:
    </div>
 </div>
 \*------------------------------------------------*/
-.g {
-   @extend %grid;
-}
-   .g__i {
-      @extend %grid__item;
-   }
+.g { @extend %grid;}
+   .g__i { @extend %grid__item;}
+
+/* endif */}

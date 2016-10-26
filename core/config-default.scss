@@ -1,10 +1,12 @@
 /*--------------------*\
  * FEATURES
 \*--------------------*/
-$grid: true !default;
+$use-grid: true !default;
 $responsive: true !default;
 $global-border-box: true !default;
 $desktop-first: false !default;
+$use-ratio-objects: false !default;
+$use-buttons: false !default;
 
 $media-direction: 'max' !default;
 @if (not $desktop-first) {
@@ -19,11 +21,21 @@ $palm-start: 480px !default;
  * Font Setup
 \*--------------------*/
 $fs-base: 16px !default;
+$line-height: 18.4px !default;
+$base-line-height: $line-height / $fs-base !default;
+$base-spacing: $line-height / $fs-base !default;
+$grid-spacing: $line-height / $fs-base !default;
 
 /*--------------------*\
  * GRID
 \*--------------------*/
 $grid-gut: 1.5 !default;
+
+/*--------------------*\
+ * GRID
+\*--------------------*/
+$transition-time: 175ms !default;
+$transition-easing: ease-in !default;
 
 /*--------------------*\
  * COLOR VARS

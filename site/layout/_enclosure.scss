@@ -1,0 +1,16 @@
+%enclosure-base {
+   margin: 0 auto;
+   @extend %soft--sides;
+}
+
+$enclosures: (
+   '_base': ('max-width': 780px),
+   'small': ('max-width': 1020px),
+   'large': ('max-width': 1360px)
+);
+
+@include placeholder-generator('enclosure', $enclosures) {
+   @extend %enclosure-base;
+}
+
+@include class-generator('enclosure', map-keys($enclosures));

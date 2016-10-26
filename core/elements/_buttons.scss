@@ -1,0 +1,51 @@
+@if $use-buttons {
+
+/*------------------------------------*\
+  $BUTTONS
+\*------------------------------------*/
+%btn--reset {
+  position: relative;
+  display: inline-block;
+  background-image: none; // remove gradient from FF on mobile
+  background-color: transparent;
+  text-align: center;
+  line-height: normal; // match Firefox
+  vertical-align: middle;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+
+  &:active,
+  &:focus { outline:none;}
+}
+
+%btn--base {
+  @extend %btn--reset;
+  cursor: pointer;
+  transition: all $transition-time $transition-easing;
+
+  &,
+  &:hover,
+  &:focus { text-decoration: none;}
+
+  &:active,
+  &:focus { transition: none;}
+
+  &[disabled],
+  &:disabled { cursor: default;}
+}
+
+%btn--selected {
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+}//endif

@@ -1,17 +1,19 @@
 /*--------------------*\
  * FEATURES
 \*--------------------*/
-$grid: true;
+$use-grid: true;
 $responsive: true;
 $global-border-box: true;
 $desktop-first: false;
+$use-ratio-objects: false;
+$use-buttons: false;
 
 /*--------------------*\
  * Font Setup
 \*--------------------*/
 /* $font names */
-$font-path: '../fonts/';
-$font-base: 'Robotto';
+$font-path: '../fnt/';
+$font-base: 'Roboto';
 $font-header: 'Rokkit';
 
 /* $font stacks used in css */
@@ -27,14 +29,14 @@ $font-header-stack: $font-header, slab-serif;
 $font-setup: (
    (
       name: $font-base,
-      path: $font-path,
-      filename: 'robotto-regular-webfont',
+      path: $font-path + 'Roboto/',
+      filename: 'Roboto-Regular-webfont',
       weight: normal,
       style: normal
    ),
    (
       name: $font-header,
-      path: $font-path,
+      path: $font-path + 'Rokkitt/',
       filename: 'rokkit-regular-webfont',
       weight: normal,
       style: normal
@@ -42,6 +44,12 @@ $font-setup: (
 );
 
 $fs-base: 16px;
+$line-height: 18.4px;
+// alternatively set
+// $base-line-height: 1.15;
+
+// $base-spacing: 1.5;
+// $grid-spacing: 1.5;
 
 /*--------------------*\
  * GRID

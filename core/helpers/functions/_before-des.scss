@@ -1,0 +1,7 @@
+@function before-des ($value) {
+  @if(str-index(string($value), '.'))
+  {
+    $value: str-slice(string($value), 0, str-index(string($value), '.')-1);
+  }
+  @return $value;
+}

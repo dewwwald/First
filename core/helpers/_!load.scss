@@ -1,9 +1,2 @@
-@import "functions/is-px";
-@import "functions/px-to-rem";
-
-@import "font-face";
-@import "heading";
-@import "media-query";
-@import "px-and-rem";
-@import "border-box";
-
+@import "functions/!load";
+@import "mixins/!load";

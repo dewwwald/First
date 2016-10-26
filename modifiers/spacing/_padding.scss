@@ -1,0 +1,19 @@
+$padding: (
+   '_base': ('padding': $base-spacing),
+   'sides': ('padding-left': $base-spacing, 'padding-right': $base-spacing),
+   'top': ('padding-left': $base-spacing, 'padding-right': $base-spacing),
+   'bottom': ('padding-left': $base-spacing, 'padding-right': $base-spacing),
+   'ends': ('padding-top': $base-spacing, 'padding-bottom': $base-spacing),
+   'small': ('padding': $base-spacing - .5),
+   'small--sides': ('padding-left': $base-spacing - .5, 'padding-right': $base-spacing - .5),
+   'small--top': ('padding-left': $base-spacing - .5, 'padding-right': $base-spacing - .5),
+   'small--bottom': ('padding-left': $base-spacing - .5, 'padding-right': $base-spacing - .5),
+   'small--ends': ('padding-top': $base-spacing - .5, 'padding-bottom': $base-spacing - .5),
+   'large': ('padding': $base-spacing + .5),
+   'large--sides': ('padding-left': $base-spacing + .5, 'padding-right': $base-spacing + .5),
+   'large--top': ('padding-left': $base-spacing + .5, 'padding-right': $base-spacing + .5),
+   'large--bottom': ('padding-left': $base-spacing + .5, 'padding-right': $base-spacing + .5),
+   'large--ends': ('padding-top': $base-spacing + .5, 'padding-bottom': $base-spacing + .5)
+);
+
+@include placeholder-generator('soft', $padding, true);

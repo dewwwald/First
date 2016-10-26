@@ -1,0 +1,12 @@
+@mixin headings ($frm: 1, $to: 6)
+{
+   %headings-#{$frm}-to-#{$to} {
+      @content;
+   }
+
+   @for $i from $frm through $to {
+      h#{$i} {
+         @extend %headings-#{$frm}-to-#{$to};
+      }
+   }
+}

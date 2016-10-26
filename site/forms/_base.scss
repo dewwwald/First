@@ -1,0 +1,16 @@
+form {
+   display: block;
+   @extend %soft;
+}
+
+label {
+   display: block;
+   width: 100%;
+   @extend %push--bottom;
+}
+
+input, textarea, select {
+   display: block;
+   width: 100%;
+   @extend %push--bottom;
+}

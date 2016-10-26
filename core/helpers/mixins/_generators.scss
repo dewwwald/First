@@ -1,0 +1,44 @@
+$all-placeholders: '' !global;
+
+@mixin placeholder-generator ($placeholder, $variations, $use-px-and-rem: false) {
+   @each $name, $properties in $variations {
+      @if $name != '' and $name != '_base' {
+         $name: "--"+$name;
+      }
+      @else {
+         $name: '';
+      }
+      %#{$placeholder+$name} {
+         $all-placeholders: join($all-placeholders, $placeholder+$name) !global;
+         @each $property, $value in $properties
+         {
+            @if $use-px-and-rem {
+               @include px-and-rem($property, $value);
+            }
+            @else {
+               #{$property}: $value;
+            }
+         }
+         @content;
+      }
+   }
+}
+
+@mixin class-generator ($class, $variations) {
+   @each $name in $variations {
+      @if $name != '' and $name != '_base' {
+         $name: "--"+$name;
+      }
+      @else {
+         $name: '';
+      }
+      @if index($all-placeholders, $class+$name) {
+         .#{$class}#{$name} {
+            @extend %#{$class}#{$name};
+         }
+      }
+      @else {
+         @warn "Generate placeholder %" + $class +  $name + " first";
+      }
+   }
+}

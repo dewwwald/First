@@ -1,0 +1,7 @@
+@function after-des ($value) {
+  @if(str-index(string($value), '.'))
+  {
+    $value: str-slice(string($value), str-index(string($value), '.')+1);
+  }
+  @return $value;
+}

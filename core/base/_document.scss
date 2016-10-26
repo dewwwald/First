@@ -3,5 +3,17 @@
  * $fs-base is determined by the design
  * #TIP users can set browser font size an you should therefore use rem
  */
-html { font-size: $fs-base / 16px * 1em;}
-body { font-size: 100%;}
+html {
+   font-family: $font-base-stack;
+   font-size: $fs-base / 16px * 1em;
+   line-height: $base-line-height;
+}
+
+body {
+   font-size: 100%;
+}
+
+* {
+   @include border-box();
+}
+

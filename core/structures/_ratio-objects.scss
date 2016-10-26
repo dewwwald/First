@@ -1,0 +1,21 @@
+@if ($use-ratio-objects)
+{
+   %ratio-container {
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+         content: "";
+         display: block;
+      }
+   }
+
+      %ratio-container__inner {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+      }
+}
+
