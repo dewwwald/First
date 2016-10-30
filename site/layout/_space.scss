@@ -5,3 +5,4 @@ $spacers: (
 );
 
 @include placeholder-generator('space', $spacers, true);
+@include class-generator('space', map-keys($spacers));
