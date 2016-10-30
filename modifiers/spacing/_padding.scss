@@ -22,4 +22,15 @@ $padding: (
    'ends--large': ('padding-top': $base-spacing + .5, 'padding-bottom': $base-spacing + .5)
 );
 
+$padding-removers: (
+   '_base': ('padding': 0),
+   'sides': ('padding-left': 0, 'padding-right': 0),
+   'top': ('padding-top': 0),
+   'bottom': ('padding-bottom': 0),
+   'left': ('padding-left': 0),
+   'right': ('padding-right': 0),
+   'ends': ('padding-top': 0, 'padding-bottom': 0)
+);
+
 @include placeholder-generator('soft', $padding, true);
+@include placeholder-generator('hard', $padding-removers, true);

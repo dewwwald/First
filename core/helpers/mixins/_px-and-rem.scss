@@ -3,7 +3,12 @@
    $mix-value-p:;
    $mix-value-r:;
    @each $value in $values {
-      @if is-px($value)
+      @if ($value == 0)
+      {
+         $mix-value-p: join($mix-value-p, 0);
+         $mix-value-r: join($mix-value-r, 0);
+      }
+      @else if is-px($value)
       {
          $mix-value-p: join($mix-value-p, $value);
          $mix-value-r: join($mix-value-r, px-to-rem($value));
