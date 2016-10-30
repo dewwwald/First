@@ -1,7 +1,12 @@
-@mixin ratio-container ($width, $height) {
+@mixin ratio-container ($width, $height, $auto-extend: true) {
    @if ($use-ratio-objects)
    {
-      @extend %ratio-container;
+      @if $auto-extend {
+         @extend %ratio-container;
+      }
+      @else {
+         @include ratio-object();
+      }
       &:before {
          padding-bottom: $height/$width * 100%;
       }
