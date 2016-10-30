@@ -1,7 +1,12 @@
-@function after-des ($value) {
+@function after-des ($value, $amount: '') {
   @if(str-index(string($value), '.'))
   {
-    $value: str-slice(string($value), str-index(string($value), '.')+1);
+    $value: str-slice( string($value), str-index( string($value), '.' ) + 1 );
+  }
+  @if $amount != ''
+  {
+      $value: str-slice(string($value), 1, $amount);
+      $value: $value;
   }
   @return $value;
 }

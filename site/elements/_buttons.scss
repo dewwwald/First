@@ -1,5 +1,7 @@
-.btn--base {
-   @extend %btn !optional;
+.btn--primary {
+   @extend %btn--base !optional;
+   @include px-and-rem(padding, 1 1.5);
+   width: auto;
 
    @include disabled () {
    }

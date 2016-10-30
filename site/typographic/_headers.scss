@@ -1,4 +1,4 @@
 @include headings() {
-   margin-bottom: 1em;
+   @extend %push--bottom;
    font-family: $font-header-stack;
 }

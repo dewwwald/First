@@ -11,6 +11,7 @@
    @else
    {
       $value: $value / $fs-base;
-      @return $value * 1rem;
+      $value: $value * 1rem;
+      @return $value;
    }
 }

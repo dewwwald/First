@@ -7,6 +7,7 @@ html {
    font-family: $font-base-stack;
    font-size: $fs-base / 16px * 1em;
    line-height: $base-line-height;
+   letter-spacing: $base-letter-spacing;
 }
 
 body {
@@ -14,6 +15,6 @@ body {
 }
 
 * {
-   @include border-box();
+   @include border-box(true);
 }
 

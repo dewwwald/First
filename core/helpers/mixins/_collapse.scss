@@ -1,0 +1,19 @@
+@mixin collapse-base () {
+   transition: all $transition-time ease-in-out;
+   overflow: hidden;
+}
+
+@mixin collapse-horizontal () {
+   max-width: 0em;
+   white-space: nowrap;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+@mixin collapse-vertical () {
+   max-height: 0em;
+   transition: all $transition-time ease-in-out;
+   overflow: hidden;
+   padding-top: 0;
+   padding-bottom: 0;
+}

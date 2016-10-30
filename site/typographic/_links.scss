@@ -1,0 +1,12 @@
+a {
+   color: $clr-primary;
+   transition: all $transition-time $transition-easing;
+
+   &:hover,
+   &:focus {
+      color: $clr-primary-ltr;
+   }
+   &:active {
+      color: $clr-primary;
+   }
+}

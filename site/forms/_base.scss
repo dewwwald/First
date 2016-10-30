@@ -1,11 +1,11 @@
 form {
    display: block;
-   @extend %soft;
 }
 
 label {
    display: block;
    width: 100%;
+   cursor: pointer;
    @extend %push--bottom;
 }
 
@@ -13,4 +13,20 @@ input, textarea, select {
    display: block;
    width: 100%;
    @extend %push--bottom;
+}
+
+textarea {
+   resize:  vertical;
+}
+
+@include placeholder () {
+   color: $clr-base-ltr;
+}
+
+input[type="password"] {
+   letter-spacing: $base-letter-spacing * 8;
+
+}
+@include placeholder ('input[type="password"]') {
+   letter-spacing: $base-letter-spacing;
 }

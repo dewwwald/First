@@ -1,11 +1,11 @@
+@import 'grid/wraps';
+@import 'grid/items';
+@import 'grid/widths';
+
 @if $use-grid {
 /**
  * See the structures/_!load.scss to understand this abstraction.
  */
-@import
-   'grid/wraps',
-   'grid/items',
-   'grid/widths';
 
 /*------------------------------------------------*\
 #First Grid

@@ -1,0 +1,18 @@
+ .menu--primary-container {
+   @extend %menu-container;
+   background-color: rgba($clr-secondary, .7);
+ }
+
+   .menu--primary {
+      @extend %menu;
+
+      & .menu__item {
+         & > a {}
+         &.menu__item--current {}
+      }
+      & .menu__sub {
+         & .menu__item {
+            &.menu__item--current {}
+         }
+      }
+   }

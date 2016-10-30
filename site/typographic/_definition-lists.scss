@@ -1,0 +1,11 @@
+dl {
+   background-color: $clr-base-ltst;
+}
+   dt {
+      @extend %soft--small;
+      font-weight: bold;
+   }
+   dd {
+      @extend %soft--small;
+      @extend %push--left--small;
+   }

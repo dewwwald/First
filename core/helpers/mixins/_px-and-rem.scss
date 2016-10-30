@@ -1,17 +1,23 @@
-@mixin px-and-rem ($property, $value)
+@mixin px-and-rem ($property, $values)
 {
-   @if is-px($value)
-   {
-      $property: $value;
-      $property: px-to-rem($value);
+   $mix-value-p:;
+   $mix-value-r:;
+   @each $value in $values {
+      @if is-px($value)
+      {
+         $mix-value-p: join($mix-value-p, $value);
+         $mix-value-r: join($mix-value-r, px-to-rem($value));
+      }
+      @else if (unit($value) == '')
+      {
+         $mix-value-p: join($mix-value-p, $value * $fs-base);
+         $mix-value-r: join($mix-value-r, $value * 1rem);
+      }
+      @else
+      {
+         @warn "Make use px or unit less values for value provided: `"+$value+"`@px-and-rem";
+      }
    }
-   @else if (unit($value) == '')
-   {
-      #{$property}: $value * $fs-base;
-      #{$property}: $value * 1rem;
-   }
-   @else
-   {
-      @warn "Make use px or unit less values for value provided: `"+$value+"`@px-and-rem";
-   }
+   #{$property}: $mix-value-p;
+   #{$property}: $mix-value-r;
 }

@@ -1,3 +1,4 @@
+@if $use-symbols {
 /*------------------------------------------------*\
 This is for symbols
 Use svg symbols for icons, there are no files loaded,
@@ -16,7 +17,7 @@ svg.display--none
 svg
  use xlink:href="#[your-id]"
 \*------------------------------------------------*/
-.symbol {
+%symbol {
    display: inline-block;
    vertical-align: inherit;
    line-height: inherit;
@@ -27,3 +28,4 @@ svg
       width: 100%;
    }
 }
+/*endif*/}

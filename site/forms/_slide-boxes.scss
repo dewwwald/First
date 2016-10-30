@@ -1,0 +1,70 @@
+@if $use-checkbox-slider {
+%checkbox-slide-option {
+   @include collapse-base();
+   display: inline-block;
+}
+
+input.checkbox-slider { @include visuallyhidden();}
+input.checkbox-slider {
+   & + label {
+      position: relative;
+      width: auto;
+      display: inline-block;
+      padding: 0;
+
+      & .initial {
+         @extend %checkbox-slide-option;
+         max-width: 10em;
+         z-index: 0;
+         padding: 1em 3em;
+         border-top-left-radius: 100em; /* any non % value way too big */
+         border-bottom-left-radius: 100em; /* any non % value way too big */
+         vertical-align: middle;
+         background-color: $clr-primary-ltr;
+      }
+
+      & .circle {
+         @include collapse-base();
+         border-radius: 100em; /* any non % value way too big */
+         background-color: $clr-primary;
+         display: inline-block;
+         vertical-align: middle;
+         height: 50px;
+         width: 50px;
+         margin-left: -25px;
+         position: relative;
+         z-index: 10;
+      }
+
+      & .toggled {
+         @extend %checkbox-slide-option;
+         vertical-align: middle;
+         z-index: 5;
+         text-align: center;
+         padding: 1em 0em;
+         @include collapse-horizontal();
+         margin-left: -25px;
+         border-top-right-radius: 100em; /* any non % value way too big */
+         border-bottom-right-radius: 100em; /* any non % value way too big */
+         background-color: $clr-base-ltr;
+      }
+   }
+   &:checked + label {
+      & .toggled {
+         max-width: 10em;
+         padding: 1em 3em;
+      }
+      & .circle {
+         margin-left: 0px;
+         background-color: $clr-base;
+      }
+      & .initial {
+         max-width: 0em;
+         padding-left: 0;
+         padding-right: 0;
+         transform: translateX(25px)
+      }
+   }
+}
+
+/*endif*/}

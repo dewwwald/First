@@ -1,0 +1,28 @@
+@if $use-custom-textarea-resize {
+
+%textarea-wrapper {
+   position: relative;
+
+   &:after {
+      content: "‹›";
+      display: inline-block;
+      pointer-events: none;
+      font-size: 1em;
+      position: absolute;
+      height: 1.2em;
+      width: 1.2em;
+      text-align: center;
+      vertical-align: middle;
+      bottom: 2px;
+      right: -2px;
+      color: $clr-base;
+      transform: rotate(90deg);
+   }
+}
+
+::-webkit-resizer {
+   -webkit-appearance: none;
+}
+.textarea-wrapper { @extend %textarea-wrapper;}
+
+/*endif*/}

@@ -1,12 +1,17 @@
 /*--------------------*\
  * FEATURES
 \*--------------------*/
-$use-grid: true;
-$responsive: true;
-$global-border-box: true;
+$use-grid: fasle;
+$responsive: fasle;
+$global-border-box: fasle;
 $desktop-first: false;
-$use-ratio-objects: false;
-$use-buttons: false;
+$use-ratio-objects: fasle;
+$use-symbols: fasle;
+$use-custom-checkbox: false;
+$use-checkbox-slider: false;
+$use-custom-radio: false;
+$use-custom-textarea-resize: false;
+$use-buttons: fasle;
 
 /*--------------------*\
  * Font Setup
@@ -47,9 +52,25 @@ $fs-base: 16px;
 $line-height: 18.4px;
 // alternatively set
 // $base-line-height: 1.15;
+$letter-spacing: 28px;
+// alternatively set
+// $base-letter-spacing: .028em;
 
 // $base-spacing: 1.5;
 // $grid-spacing: 1.5;
+
+$fs-largest: 60px;
+$fs-larger: 50px;
+$fs-large: 40px;
+$fs-h1: 30px;
+$fs-h2: 25px;
+$fs-h3: 20px;
+$fs-h4: 18px;
+$fs-h5: 16px;
+$fs-h6: 14px;
+$fs-small: 12px;
+$fs-smaller: 10px;
+$fs-smallest: 8px;
 
 /*--------------------*\
  * GRID
@@ -65,19 +86,19 @@ $clr-base-ltr: #a8a8a8;
 $clr-base-ltst: #EAEAEA;
 $clr-base-dk: darken($clr-base, 5%);
 
-$clr-primary: #EE4596;
+$clr-primary: #6EDDE0;
 $clr-primary-lt: lighten($clr-primary, 5%);
 $clr-primary-ltr: lighten($clr-primary, 10%);
 $clr-primary-ltst: lighten($clr-primary, 15%);
 $clr-primary-dk: darken($clr-primary, 5%);
 
-$clr-secondary: #56CFAD;
+$clr-secondary: #EA6E5E;
 $clr-secondary-lt: lighten($clr-secondary, 5%);
 $clr-secondary-ltr: lighten($clr-secondary, 10%);
 $clr-secondary-ltst: lighten($clr-secondary, 15%);
 $clr-secondary-dk: darken($clr-secondary, 5%);
 
-$clr-tertiary: #f7931e;
+$clr-tertiary: #FFDD15;
 $clr-tertiary-lt: lighten($clr-tertiary, 5%);
 $clr-tertiary-ltr: lighten($clr-tertiary, 10%);
 $clr-tertiary-ltst: lighten($clr-tertiary, 15%);

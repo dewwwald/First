@@ -1,9 +1,9 @@
 /**
  * add border-box sizing of not global
  */
-@mixin border-box ()
+@mixin border-box ($bool: false)
 {
-   @if (not $global-border-box)
+   @if ($bool or (not $global-border-box))
    {
       box-sizing: border-box;
    }

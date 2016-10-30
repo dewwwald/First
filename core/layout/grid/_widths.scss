@@ -16,7 +16,7 @@ $remember-grid-size: '' !global;
     @if (not index($remember-grid-size, $size+'-'+before-des( $i / $denominator * 100)+"-"+after-des( $i / $denominator * 100)))
     {
       $remember-grid-size: join($remember-grid-size, ($size+'-'+before-des( $i / $denominator * 100)+"-"+after-des( $i / $denominator * 100)) ) !global;
-      %#{$size}w--#{before-des( $i / $denominator * 100)}-#{after-des( $i / $denominator * 100)} { width: $i/$denominator*100%;}
+      %#{$size}w--#{before-des( $i / $denominator * 100)}-#{after-des( $i / $denominator * 100)} { width: floor($i / $denominator * 1000%) / 10;}
     }
     .#{$size}w--#{$i}\/#{$denominator} { @extend %#{$size}w--#{before-des( $i / $denominator * 100)}-#{after-des( $i / $denominator * 100)};}
   }
@@ -28,7 +28,6 @@ $remember-grid-size: '' !global;
    %w--auto { width: auto;}
    .w--auto { @extend %w--auto;}
 
-   @include make-widths('', 1);
    @include make-widths('', 2);
    @include make-widths('', 3);
    @include make-widths('', 4);
@@ -38,14 +37,12 @@ $remember-grid-size: '' !global;
    @if ($responsive)
    {
       @include media('palm') {
-         @include make-widths('palm', 1);
          @include make-widths('palm', 2);
          @include make-widths('palm', 3);
          @include make-widths('palm', 4);
       }
 
       @include media('lap') {
-         @include make-widths('lap', 1);
          @include make-widths('lap', 2);
          @include make-widths('lap', 3);
          @include make-widths('lap', 4);

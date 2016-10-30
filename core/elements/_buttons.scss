@@ -9,7 +9,7 @@
   background-image: none; // remove gradient from FF on mobile
   background-color: transparent;
   text-align: center;
-  line-height: normal; // match Firefox
+  line-height: normal !important; // match Firefox
   vertical-align: middle;
   height: auto;
   margin: 0;

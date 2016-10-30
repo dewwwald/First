@@ -1,5 +1,6 @@
 blockquote {
    display: block;
-   border-left: 1px solid;
-   padding-left: 2em;
+   border-left: 1px solid $clr-base;
+   @extend %soft--left--large;
+   margin-left: .5em;
 }

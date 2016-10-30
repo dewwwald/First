@@ -1,19 +1,23 @@
 $margin: (
    '_base': ('margin': $base-spacing),
    'sides': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
-   'top': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
-   'bottom': ('margin-left': $base-spacing, 'margin-right': $base-spacing),
+   'top': ('margin-top': $base-spacing),
+   'bottom': ('margin-bottom': $base-spacing),
+   'left': ('margin-left': $base-spacing),
+   'right': ('margin-right': $base-spacing),
    'ends': ('margin-top': $base-spacing, 'margin-bottom': $base-spacing),
    'small': ('margin': $base-spacing - .5),
-   'small--sides': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
-   'small--top': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
-   'small--bottom': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
-   'small--ends': ('margin-top': $base-spacing - .5, 'margin-bottom': $base-spacing - .5),
+   'sides--small': ('margin-left': $base-spacing - .5, 'margin-right': $base-spacing - .5),
+   'top--small': ('margin-top': $base-spacing - .5),
+   'bottom--small': ('margin-bottom': $base-spacing - .5),
+   'left--small': ('margin-left': $base-spacing - .5),
+   'right--small': ('margin-right': $base-spacing - .5),
+   'ends--small': ('margin-top': $base-spacing - .5, 'margin-bottom': $base-spacing - .5),
    'large': ('margin': $base-spacing + .5),
-   'large--sides': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
-   'large--top': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
-   'large--bottom': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
-   'large--ends': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5)
+   'sides--large': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
+   'top--large': ('margin-top': $base-spacing + .5),
+   'bottom--large': ('margin-bottom': $base-spacing + .5),
+   'ends--large': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5)
 );
 
 @include placeholder-generator('push', $margin, true);

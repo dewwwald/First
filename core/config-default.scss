@@ -2,10 +2,16 @@
  * FEATURES
 \*--------------------*/
 $use-grid: true !default;
+$legacy-grid: false !default;
 $responsive: true !default;
 $global-border-box: true !default;
 $desktop-first: false !default;
 $use-ratio-objects: false !default;
+$use-symbols: false !default;
+$use-custom-checkbox: false !default;
+$use-checkbox-slider: false !default;
+$use-ratio-objects: false !default;
+$use-custom-textarea-resize: true !default;
 $use-buttons: false !default;
 
 $media-direction: 'max' !default;
@@ -25,6 +31,22 @@ $line-height: 18.4px !default;
 $base-line-height: $line-height / $fs-base !default;
 $base-spacing: $line-height / $fs-base !default;
 $grid-spacing: $line-height / $fs-base !default;
+$letter-spacing: 28px !default;
+$base-letter-spacing: $letter-spacing / 1000px * 1em !default;
+
+$fs-largest: 60px !default;
+$fs-larger: 50px !default;
+$fs-large: 40px !default;
+$fs-h1: 30px !default;
+$fs-h2: 25px !default;
+$fs-h3: 20px !default;
+$fs-h4: 18px !default;
+$fs-h5: 16px !default;
+$fs-h6: 14px !default;
+$fs-small: 12px !default;
+$fs-smaller: 10px !default;
+$fs-smallest: 8px !default;
+
 
 /*--------------------*\
  * GRID

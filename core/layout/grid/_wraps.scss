@@ -1,30 +1,61 @@
 /**
  * The grid wrapper
+ * Legacy grid does not work for modern browsers
+ * - Chrome breaks
+ * - FF breaks
  */
 %grid {
-   display: block;
-   width: 100%;
-   width: calc(100% + #{$grid-gut} * 1rem);
-   margin: 0;
-   @include px-and-rem(margin-left, -$grid-gut);
    @include border-box();
+   margin-bottom: 0;
+   @include px-and-rem(margin-left, -$grid-gut);
 
-   font-size: 0px;
-   & > %grid__item { font-size: 1rem}
+   @if ($legacy-grid)
+   {
+      display: block;
+      width: 100%;
+      width: calc( 100% + #{ ($grid-gut) * 1rem } );
+
+      font-size: 0px;
+      & > %grid__item { font-size: 1rem}
+   }
+
+   display: flex;
+   flex: 0 1 auto;
+   flex-direction: row;
+   flex-wrap: wrap;
 }
 
 %grid--middle {
+   @if ($legacy-grid) {
+      & > %grid__item {
+         vertical-align: middle;
+      }
+   }
+
    @extend %grid;
-   vertical-align: middle;
+   align-items: center;
 }
 
 %grid--bottom {
+   @if ($legacy-grid) {
+      & > %grid__item {
+         vertical-align: bottom;
+
+      }
+   }
+
    @extend %grid;
-   vertical-align: middle;
+   align-items: flex-end;
 }
 
 %grid--reverse {
+   @if ($legacy-grid) {
+      direction: rtl;
+      text-align: left;
+   }
+
    @extend %grid;
-   direction: rtl;
+   justify-content: flex-end;
+   flex-direction: row-reverse;
 }
 

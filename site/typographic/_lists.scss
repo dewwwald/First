@@ -1,0 +1,10 @@
+ul {
+   margin-left: 0;
+   @extend %soft--left--large;
+}
+
+
+ol {
+   margin-left: 0;
+   @extend %soft--left--large;
+}

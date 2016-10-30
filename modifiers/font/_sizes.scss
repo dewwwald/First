@@ -1,0 +1,16 @@
+$headings: (
+   'largest': ('font-size': $fs-largest),
+   'larger': ('font-size': $fs-larger),
+   'large': ('font-size': $fs-large),
+   'h1': ('font-size': $fs-h1),
+   'h2': ('font-size': $fs-h2),
+   'h3': ('font-size': $fs-h3),
+   'h4': ('font-size': $fs-h4),
+   'h5': ('font-size': $fs-h5),
+   'h6': ('font-size': $fs-h6),
+   'small': ('font-size': $fs-small),
+   'smaller': ('font-size': $fs-smaller),
+   'smallest': ('font-size': $fs-smallest)
+);
+
+@include placeholder-generator('fs', $headings, true);
