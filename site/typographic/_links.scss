@@ -1,6 +1,7 @@
 a {
    color: $clr-primary;
    transition: all $transition-time $transition-easing;
+   cursor: pointer;
 
    &:hover,
    &:focus {
