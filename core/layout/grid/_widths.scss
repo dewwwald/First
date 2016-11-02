@@ -28,6 +28,12 @@ $remember-grid-size: '' !global;
    %w--auto { width: auto;}
    .w--auto { @extend %w--auto;}
 
+   %w--fill {
+      width: auto;
+      flex-grow: 1;
+   }
+   .w--fill { @extend %w--fill;}
+
    @include make-widths('', 2);
    @include make-widths('', 3);
    @include make-widths('', 4);
