@@ -1,0 +1,9 @@
+$text: (
+   left: ( text-align: left),
+   right: ( text-align: right),
+   center: ( text-align: center)
+);
+
+@include placeholder-generator('text', $text);
+
+// .text--right { @extend %text--right;}
