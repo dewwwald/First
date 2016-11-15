@@ -36,6 +36,17 @@
    align-items: center;
 }
 
+%grid--center {
+   @if ($legacy-grid) {
+      & > %grid__item {
+         text-align: center;
+      }
+   }
+
+   @extend %grid;
+   justify-content: center;
+}
+
 %grid--bottom {
    @if ($legacy-grid) {
       & > %grid__item {
