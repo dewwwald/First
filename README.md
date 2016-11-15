@@ -1,4 +1,4 @@
-#First
+#Modern
 
 ##A few points
 - Because when you want to go fast you must go alone. I am still learning and this will be a way to refine my workflow (If you want to learn you must go alone)
@@ -17,7 +17,7 @@
 Run the following command in the folder you want the framework to be made.
 
 ```bash
-curl -L https://github.com/dewwwald/First/archive/master.tar.gz | tar zx --strip 1
+curl -L https://github.com/dewwwald/Modern/archive/master.tar.gz | tar zx --strip 1
 ```
 
 ##TERMS
