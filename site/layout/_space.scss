@@ -1,8 +1,0 @@
-$spacers: (
-   '_base': ('padding-top': 5, 'padding-bottom': 5),
-   'small': ('padding-top': 3, 'padding-bottom': 3),
-   'large': ('padding-top': 7, 'padding-bottom': 7)
-);
-
-@include placeholder-generator('space', $spacers, true);
-@include class-generator('space', map-keys($spacers));

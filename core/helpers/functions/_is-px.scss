@@ -3,7 +3,6 @@
  * @param value
  * @return bool
  */
-@function is-px ($value)
-{
+@function is-px ($value) {
    @return unit($value) == 'px' or $value == 0
 }

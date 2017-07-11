@@ -1,0 +1,15 @@
+/**
+ * Config
+ */
+@import "theme-framework";
+
+/**
+ * Go ahead and edit custom load
+ */
+/*------------------------------------------------*\
+#TIP - do you want an admin sheet?
+- Duplicate theme.scss as admin.scss
+- change the theme/!load to a duplicate admin/!load
+- Duplicate the theme dirr to admin
+\*------------------------------------------------*/
+// @import "theme/!load";

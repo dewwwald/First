@@ -1,0 +1,26 @@
+@if $use-checkbox-slider {
+
+input.checkbox-slider {
+   & + label {
+      & .initial {
+         background-color: $clr-primary-ltr;
+      }
+
+      & .circle {
+         background-color: $clr-primary;
+      }
+
+      & .toggled {
+         background-color: $clr-base-ltr;
+      }
+   }
+   &:checked + label {
+      & .toggled {}
+      & .circle {
+         background-color: $clr-base;
+      }
+      & .initial {}
+   }
+}
+
+/*endif*/}

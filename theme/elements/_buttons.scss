@@ -1,0 +1,7 @@
+.btn--primary {
+   background-color: $clr-primary;
+
+   @include disabled () {
+      background-color: $clr-base;
+   }
+}

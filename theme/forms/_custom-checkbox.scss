@@ -1,0 +1,21 @@
+@if $use-custom-checkbox {
+
+.custom-checkbox {
+   @include visuallyhidden();
+}
+input.custom-checkbox {
+
+   & + label {
+      & svg {
+         stroke: transparent;
+      }
+   }
+
+   &:checked + label {
+      & svg {
+         stroke: $clr-base;
+      }
+   }
+}
+
+/*endif*/}

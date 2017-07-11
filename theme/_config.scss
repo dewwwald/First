@@ -1,0 +1,107 @@
+/*--------------------*\
+ * FEATURES
+\*--------------------*/
+$use-grid: false;
+$responsive: false;
+$global-border-box: false;
+$use-ratio-objects: false;
+$use-symbols: false;
+$use-custom-checkbox: false;
+$use-checkbox-slider: false;
+$use-custom-radio: false;
+$use-custom-textarea-resize: false;
+$use-buttons: false;
+
+/*--------------------*\
+ * Font Setup
+\*--------------------*/
+/* $font names */
+$font-path: '../fnt/';
+$font-base: 'Roboto';
+$font-header: 'Rokkit';
+
+/* $font stacks used in css */
+$font-base-stack: $font-base, slab-serif;
+$font-header-stack: $font-header, slab-serif;
+
+/* $font config used by core */
+/*------------------------------------------------*\
+#TIP - How to get more font configs
+- duplicate the sass map
+- then simply change the values
+\*------------------------------------------------*/
+$font-setup: ();
+// $font-setup: (
+//    (
+//       name: $font-base,
+//       path: $font-path + 'Roboto/',
+//       filename: 'Roboto-Regular-webfont',
+//       weight: normal,
+//       style: normal
+//    ),
+//    (
+//       name: $font-header,
+//       path: $font-path + 'Rokkitt/',
+//       filename: 'rokkit-regular-webfont',
+//       weight: normal,
+//       style: normal
+//    )
+// );
+
+$fs-base: 16px;
+$line-height: 18.4px;
+// alternatively set
+// $base-line-height: 1.15;
+$letter-spacing: 28px;
+// alternatively set
+// $base-letter-spacing: .028em;
+
+// $base-spacing: 1.5;
+// $grid-spacing: 1.5;
+
+$fs-largest: 60px;
+$fs-larger: 50px;
+$fs-large: 40px;
+$fs-h1: 30px;
+$fs-h2: 25px;
+$fs-h3: 20px;
+$fs-h4: 18px;
+$fs-h5: 16px;
+$fs-h6: 14px;
+$fs-small: 12px;
+$fs-smaller: 10px;
+$fs-smallest: 8px;
+
+/*--------------------*\
+ * GRID
+\*--------------------*/
+$grid-gut: 1.5;
+
+/*--------------------*\
+ * COLOR VARS
+\*--------------------*/
+$clr-base: #404040;
+$clr-base-lt: #979797;
+$clr-base-ltr: #a8a8a8;
+$clr-base-ltst: #EAEAEA;
+$clr-base-dk: darken($clr-base, 5%);
+
+$clr-primary: #6EDDE0;
+$clr-primary-lt: lighten($clr-primary, 5%);
+$clr-primary-ltr: lighten($clr-primary, 10%);
+$clr-primary-ltst: lighten($clr-primary, 15%);
+$clr-primary-dk: darken($clr-primary, 5%);
+
+$clr-secondary: #EA6E5E;
+$clr-secondary-lt: lighten($clr-secondary, 5%);
+$clr-secondary-ltr: lighten($clr-secondary, 10%);
+$clr-secondary-ltst: lighten($clr-secondary, 15%);
+$clr-secondary-dk: darken($clr-secondary, 5%);
+
+$clr-tertiary: #FFDD15;
+$clr-tertiary-lt: lighten($clr-tertiary, 5%);
+$clr-tertiary-ltr: lighten($clr-tertiary, 10%);
+$clr-tertiary-ltst: lighten($clr-tertiary, 15%);
+$clr-tertiary-dk: darken($clr-tertiary, 5%);
+
+$clr-quintinary: #424f64;

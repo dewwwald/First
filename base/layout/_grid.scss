@@ -1,0 +1,37 @@
+@import 'grid/wraps';
+@import 'grid/items';
+@import 'grid/widths';
+
+@if $use-grid {
+/**
+ * See the structures/_!load.scss to understand this abstraction.
+ */
+
+/*------------------------------------------------*\
+#First Grid
+To use the grid you need to use have a grid wrap.
+If you want a grid that works without it go and use
+bootstrap. I believe a grids should (atleast for now) either be
+inline-block or flexbox.
+
+HTML:
+<div class="g">
+   <div class="g__i w--1/2">
+      project_name
+   </div>
+   <div class="g__i w--1/2">
+      client_name
+   </div>
+</div>
+\*------------------------------------------------*/
+.g { @extend %grid;}
+   .g__i { @extend %grid__item;}
+
+/**
+ * See core/structures/grid for more clarification
+ */
+
+// .g--middle { @extend %grid--middle;}
+// .g--reverse { @extend %grid--reverse;}
+
+/* endif */}

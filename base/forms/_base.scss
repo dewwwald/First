@@ -1,0 +1,28 @@
+form {
+   display: block;
+}
+
+label {
+   display: block;
+   width: 100%;
+   cursor: pointer;
+   @extend %push--bottom;
+}
+
+input, textarea, select {
+   display: block;
+   width: 100%;
+   @extend %push--bottom;
+}
+
+textarea {
+   resize:  vertical;
+}
+
+input[type="password"] {
+   letter-spacing: $base-letter-spacing * 8;
+
+}
+@include placeholder ('input[type="password"]') {
+   letter-spacing: $base-letter-spacing;
+}

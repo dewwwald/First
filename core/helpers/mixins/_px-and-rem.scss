@@ -1,7 +1,6 @@
-@mixin px-and-rem ($property, $values)
-{
-   $mix-value-p:;
-   $mix-value-r:;
+@mixin px-and-rem ($property, $values) {
+   $mix-value-p: ();
+   $mix-value-r: ();
    @each $value in $values {
       @if ($value == 0)
       {

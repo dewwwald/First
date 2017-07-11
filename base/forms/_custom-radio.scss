@@ -1,0 +1,18 @@
+@if $use-custom-radio {
+
+input[type=radio] {
+
+   & + label {
+      & svg {
+         border: 1px solid;
+         border-radius: 100%;
+      }
+   }
+
+   &:checked + label {
+      & svg {}
+   }
+}
+
+/*endif*/}
+

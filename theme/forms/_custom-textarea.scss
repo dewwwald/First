@@ -1,0 +1,9 @@
+@if $use-custom-textarea-resize {
+
+.textarea-wrapper {
+   &:after {
+      color: $clr-base;
+   }
+}
+
+/*endif*/}

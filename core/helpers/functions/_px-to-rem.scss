@@ -2,14 +2,10 @@
  * @param value with unit px
  * @return value remified
  */
-@function px-to-rem ($value)
-{
-   @if not is-px($value)
-   {
+@function px-to-rem ($value) {
+   @if not is-px($value) {
       @warn "Make sure that `$value` is a px unit.";
-   }
-   @else
-   {
+   } @else {
       $value: $value / $fs-base;
       $value: $value * 1rem;
       @return $value;

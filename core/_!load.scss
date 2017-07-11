@@ -1,9 +1,9 @@
-@import "helpers/!load";
+@import "config-default";
 
-@import "base/!load";
+@import 'helpers/!load';
 
-@import "layout/!load";
+@import 'elements/!load';
 
-@import "elements/!load";
+@import 'component/!load';
 
-@import "structures/!load";
+@import 'modifiers/!load';

@@ -7,10 +7,10 @@
 - This is a framework for toolkit development. Add things as you need them.
 
 ## Knowledge and resources
-- You should learn css (or some other tech that will displace it) not a framework like this. So first go learn that and come back. For if css goes far enough and browsers catch on sass could become obsolete.
+- You should learn css (or some other tech that will displace it) not a framework like this. So first go learn that and come back. For if css improves enough and browsers catch on sass could become obsolete.
 - Read the framework.
-- This framework is as a result of github.com/larrybotha/styleguide, whom use to be my mentor in css
-- Inuit.css is a good to idea of what this framework should do.
+- Inuit.css is a good idea of what this framework should do.
+- Instead of using http patterns (that most frameworks use) well use HTTP/2 patterns.
 
 ## INSTALLATION
 
@@ -26,8 +26,20 @@ Programmers use the natural language (mostly English) to describe what the compu
 
 ### Elements
 Elements: an essential or characteristic part of something abstract.
-- For example a grid-width arranged with a grid wrap is dependant on one another.
+- For example a grid-width arranged with a grid item are dependant on one another.
 
-### Structure
-Structure: is an arrangement and organization of interrelated elements in a material object or system.
-- For example a grid is an arrangement of grid widths and grid wraps
+### Components
+Components: a part or an element of a larger whole.
+- For example a grid is an arrangement of grid items and grid wraps
+
+
+## Files and Folders
+
+```
+|-- core
+	(core helpers and mixins)
+|-- base
+	(base styles for the app)
+|-- theme
+	(color theme for the app)
+```

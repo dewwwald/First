@@ -1,0 +1,4 @@
+@include headings() {
+   @extend %push--bottom;
+   font-family: $font-header-stack;
+}

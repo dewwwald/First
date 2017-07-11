@@ -1,0 +1,11 @@
+a {
+   color: $clr-primary;
+
+   &:hover,
+   &:focus {
+      color: $clr-primary-ltr;
+   }
+   &:active {
+      color: $clr-primary;
+   }
+}
