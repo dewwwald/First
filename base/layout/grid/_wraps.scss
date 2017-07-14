@@ -5,24 +5,25 @@
  * - FF breaks
  */
 %grid {
-   @include border-box();
-   margin-bottom: 0;
-   @include px-and-rem(margin-left, -$grid-gut);
+  @include border-box();
+  margin-bottom: 0;
+  @include px-and-rem(margin-left, -$grid-gut);
 
-   @if ($legacy-grid)
-   {
-      display: block;
-      width: 100%;
-      width: calc( 100% + #{ ($grid-gut) * 1rem } );
+  @if ($legacy-grid) {
+    display: block;
+    width: 100%;
+    width: calc( 100% + #{ ($grid-gut) * 1rem } );
 
-      font-size: 0px;
-      & > %grid__item { font-size: 1rem}
-   }
+    font-size: 0px;
+    & > %grid__item { font-size: 1rem}
+  }
 
-   display: flex;
-   flex: 0 1 auto;
-   flex-direction: row;
-   flex-wrap: wrap;
+  @supports (display: flex) {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 %grid--middle {
@@ -33,41 +34,48 @@
    }
 
    @extend %grid;
-   align-items: center;
+   @supports (display: flex) {
+     align-items: center;
+   }
 }
 
 %grid--center {
-   @if ($legacy-grid) {
-      & > %grid__item {
-         text-align: center;
-      }
-   }
+  @if ($legacy-grid) {
+    & > %grid__item {
+       text-align: center;
+    }
+  }
 
-   @extend %grid;
-   justify-content: center;
+  @extend %grid;
+  @supports (display: flex) {
+    justify-content: center;
+  }
 }
 
 %grid--bottom {
-   @if ($legacy-grid) {
-      & > %grid__item {
-         vertical-align: bottom;
+  @if ($legacy-grid) {
+    & > %grid__item {
+      vertical-align: bottom;
+    }
+  }
 
-      }
-   }
-
-   @extend %grid;
-   align-items: flex-end;
+  @extend %grid;
+  @supports (display: flex) {
+    align-items: flex-end;
+  }
 }
 
 %grid--reverse {
-   @if ($legacy-grid) {
-      direction: rtl;
-      text-align: left;
-   }
+  @if ($legacy-grid) {
+    direction: rtl;
+    text-align: left;
+  }
 
-   @extend %grid;
-   justify-content: flex-end;
-   flex-direction: row-reverse;
+  @extend %grid;
+  @supports (display: flex) {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
 }
 
 %grid--no-guts {
