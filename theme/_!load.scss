@@ -1,14 +1,8 @@
-/* HELPER CLASSES */
-@import "helpers";
-
 /* SINGLE STAND ALONE CLASSES */
 @import "elements/!load";
 
 /* COMBINED CLASSES */
-@import "structures/!load";
-
-/* CLASSES GROUPED RELATING TO FUNCTION */
-@import "layout/!load";
+@import "menus/!load";
 
 /* HTML RELATED STYLING */
 @import "typographic/!load";
