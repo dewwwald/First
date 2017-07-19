@@ -14,9 +14,9 @@ $use-ratio-objects: false !default;
 $use-custom-textarea-resize: true !default;
 $use-buttons: false !default;
 
-$media-direction: 'max' !default;
-@if (not $desktop-first) {
-   $media-direction: 'min';
+$media-direction: 'min' !default;
+@if ($desktop-first) {
+  $media-direction: 'max';
 }
 
 $desk-start: 1080px !default;

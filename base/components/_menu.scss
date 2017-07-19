@@ -15,19 +15,28 @@
 
 %menu-container {
    display: block;
+   position: relative;
 }
 %menu {
    position: relative;
-   display: block;
+   display: inline-block;
    margin: 0;
    overflow: visible;
    z-index: 5;
 }
+%menu.lhs {
+  @extend %center-logo;
+}
+%menu.rhs {
+  @extend %center-logo;
+}
+
 %menu__item {
-   position: relative;
-   display: inline-block;
-   white-space: nowrap;
-   overflow: visible;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: visible;
+  display: block;
 
    & > a {
       overflow: hidden;
