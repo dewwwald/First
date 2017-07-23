@@ -12,7 +12,7 @@ $all-placeholders: '' !global;
          $all-placeholders: join($all-placeholders, $placeholder+$name) !global;
          @each $property, $value in $properties
          {
-            @if $use-px-and-rem {
+            @if $use-px-and-rem and $value != auto {
                @include px-and-rem($property, $value);
             }
             @else {
