@@ -1,0 +1,7 @@
+hr {
+   @extend %flush--top, %push--bottom;
+   @include px-and-rem(border-bottom-width, $border-width);
+   border-width: 0px;
+   border-style: solid;
+   border-color: $clr-base-ui;
+}

@@ -21,3 +21,15 @@ $margin: (
 );
 
 @include placeholder-generator('push', $margin, true);
+
+$marginFlush: (
+   '_base': ('margin': 0),
+   'sides': ('margin-left': 0, 'margin-right': 0),
+   'top': ('margin-top': 0),
+   'bottom': ('margin-bottom': 0),
+   'left': ('margin-left': 0),
+   'right': ('margin-right': 0),
+   'ends': ('margin-top': 0, 'margin-bottom': 0),
+);
+
+@include placeholder-generator('flush', $marginFlush, true);
