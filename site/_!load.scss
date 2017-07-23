@@ -5,14 +5,19 @@
 @import "elements/!load";
 
 /* COMBINED CLASSES */
-@import "structures/!load";
+@import "components/!load";
 
 /* CLASSES GROUPED RELATING TO FUNCTION */
 @import "layout/!load";
 
-/* HTML RELATED STYLING */
+/* GENERAL */
+@import "general/!load";
+
+/* TYPOGRAPHIC */
 @import "typographic/!load";
+
+/* FORMS */
 @import "forms/!load";
 
 /* PAGE SPECIFIC STYLING */
-@import "pages/!load";
+// @import "pages/!load";
