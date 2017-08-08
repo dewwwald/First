@@ -17,7 +17,8 @@ $margin: (
    'sides--large': ('margin-left': $base-spacing + .5, 'margin-right': $base-spacing + .5),
    'top--large': ('margin-top': $base-spacing + .5),
    'bottom--large': ('margin-bottom': $base-spacing + .5),
-   'ends--large': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5)
+   'ends--large': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5),
+   'center': ('margin-left': auto, 'margin-right': auto)
 );
 
 $margin-media-queries: ('_base');

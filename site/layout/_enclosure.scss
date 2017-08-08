@@ -1,7 +1,6 @@
 %enclosure-base {
-   margin: 0 auto;
+   @extend %soft--sides, %push--center;
    width: 100%;
-   @extend %soft--sides;
 }
 
 $enclosures: (
