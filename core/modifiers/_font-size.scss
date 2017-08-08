@@ -13,4 +13,6 @@ $headings: (
    'smallest': ('font-size': $fs-smallest)
 );
 
-@include placeholder-generator('fs', $headings, true);
+$headings-media-queries: ('_base');
+
+@include placeholder-generator('fs', $headings, true, $headings-media-queries);

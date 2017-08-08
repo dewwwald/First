@@ -1,44 +1,60 @@
 $all-placeholders: '' !global;
 
-@mixin placeholder-generator ($placeholder, $variations, $use-px-and-rem: false) {
-   @each $name, $properties in $variations {
-      @if $name != '' and $name != '_base' {
-         $name: "--"+$name;
-      }
-      @else {
-         $name: '';
-      }
-      %#{$placeholder+$name} {
-         $all-placeholders: join($all-placeholders, $placeholder+$name) !global;
-         @each $property, $value in $properties
-         {
-            @if $use-px-and-rem and $value != auto {
-               @include px-and-rem($property, $value);
+/* HELPER */
+@mixin placeholder-generator-content($name, $properties, $use-px-and-rem) {
+  $all-placeholders: join($all-placeholders, $name) !global;
+   %#{$name} {
+     @each $property, $value in $properties {
+        @if $use-px-and-rem and $value != auto {
+           @include px-and-rem($property, $value);
+        } @else {
+           #{$property}: $value;
+        }
+     }
+     @content;
+  }
+}
+
+/* MAIN */
+@mixin placeholder-generator ($placeholder, $variations, $use-px-and-rem: false, $media-queries: ['_base']) {
+  @each $media-querie in $media-queries {
+     @each $name, $properties in $variations {
+        @if $name != '' and $name != '_base' {
+           $name: "--"+$name;
+        } @else {
+           $name: '';
+        }
+
+        @if ($media-querie != '_base') {
+          @include media($media-querie) {
+            $name: $name + '--' + $media-querie;
+            @include placeholder-generator-content($placeholder + $name, $properties, $use-px-and-rem) {
+              @content;
             }
-            @else {
-               #{$property}: $value;
-            }
-         }
-         @content;
-      }
-   }
+          }
+        } @else {
+          @include placeholder-generator-content($placeholder+$name, $properties, $use-px-and-rem) {
+            @content;
+          }
+        }
+     }
+  }
 }
 
 @mixin class-generator ($class, $variations) {
    @each $name in $variations {
       @if $name != '' and $name != '_base' {
          $name: "--"+$name;
-      }
-      @else {
+      } @else {
          $name: '';
       }
       @if index($all-placeholders, $class+$name) {
          .#{$class}#{$name} {
             @extend %#{$class}#{$name};
          }
-      }
-      @else {
+      } @else {
          @warn "Generate placeholder %" + $class +  $name + " first";
       }
    }
 }
+

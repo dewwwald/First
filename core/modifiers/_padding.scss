@@ -32,5 +32,7 @@ $padding-removers: (
    'ends': ('padding-top': 0, 'padding-bottom': 0)
 );
 
-@include placeholder-generator('soft', $padding, true);
-@include placeholder-generator('hard', $padding-removers, true);
+$padding-media-queries: ('_base');
+
+@include placeholder-generator('soft', $padding, true, $padding-media-queries);
+@include placeholder-generator('hard', $padding-removers, true, $padding-media-queries);

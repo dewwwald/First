@@ -20,7 +20,9 @@ $margin: (
    'ends--large': ('margin-top': $base-spacing + .5, 'margin-bottom': $base-spacing + .5)
 );
 
-@include placeholder-generator('push', $margin, true);
+$margin-media-queries: ('_base');
+
+@include placeholder-generator('push', $margin, true, $margin-media-queries);
 
 $marginFlush: (
    '_base': ('margin': 0),
@@ -32,4 +34,4 @@ $marginFlush: (
    'ends': ('margin-top': 0, 'margin-bottom': 0),
 );
 
-@include placeholder-generator('flush', $marginFlush, true);
+@include placeholder-generator('flush', $marginFlush, true, $margin-media-queries);
