@@ -1,14 +1,9 @@
 @mixin media ($size) {
-   @if ($size == 'palm')
-   {
-     $size: $palm-start;
-   }
-   @else if ($size == 'lap')
-   {
+   @if ($size == 'palm') {
+      $size: $palm-start;
+   } @else if ($size == 'lap') {
       $size: $lap-start;
-   }
-   @else if ($size == 'desk')
-   {
+   } @else if ($size == 'desk') {
       $size: $desk-start;
    }
 
